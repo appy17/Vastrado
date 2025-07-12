@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Searchbar from "./Searchbar";
 import CardDrawer from "../Layout/CardDrawer";
 import { IoMdClose } from "react-icons/io";
-import imgLogo from '../../assets/Vastrado_Logo_1a-01_1.webp'
+import imgLogo from "../../assets/Vastrado_Logo_1a-01_1.webp";
 
 function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -19,7 +19,10 @@ function Navbar() {
 
   return (
     <>
-      <nav className="container mx-auto flex item-center justify-between py-4 px-6">
+      <nav
+        className="container mx-auto flex item-center justify-between py-4 px-6 "
+        style={{ marginLeft: "61px" }}
+      >
         {/* left logo */}
 
         <div className="hidden md:flex space-x-6">
@@ -49,37 +52,36 @@ function Navbar() {
           </Link>
         </div>
 
-{/* center Navigation */}
+        {/* center Navigation */}
 
-        <div>
+        <div className="flex justify-center sm:justify-center  space-x-6 text-center ">
           <Link to="/" className="text-2xl font-medium">
-            <img src={imgLogo}/>
+            <img src={imgLogo} className="" />
           </Link>
         </div>
 
-        
-
         {/* right section */}
-        <div className="flex items-center space-x-4">
+        <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 px-4 py-2 flex justify-around items-center md:static md:border-0 md:p-0 md:justify-end md:space-x-4 md:w-auto">
           <Link to="/profile" className="hover:text-black">
             <HiOutlineUser className="h-6 w-6 text-gray-700" />
           </Link>
+
           <button
             onClick={toggleCardDrawer}
             className="relative hover:text-black"
           >
             <HiOutlineShoppingBag className="h-6 w-6 text-gray-700" />
-            <span className="absolute -top-1  bg-[#ea2e0e] text-white text-xs rounded-full px-2 py-0.5 ">
+            <span className="absolute -top-1 bg-[#ea2e0e] text-white text-xs rounded-full px-2 py-0.5">
               4
             </span>
           </button>
-          {/* search  */}
-          <div className="overflow-hidden">
+
+          <div className="overflow-hidden hidden md:block">
             <Searchbar />
           </div>
 
           <button onClick={toggleNavDrawer} className="md:hidden">
-            <HiBars3BottomRight className="h-6 w-6 text-gray-700 " />
+            <HiBars3BottomRight className="h-6 w-6 text-gray-700" />
           </button>
         </div>
       </nav>
