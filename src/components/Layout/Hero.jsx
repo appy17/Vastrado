@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 function Hero() {
   return (
-    <section className="h-[100%]">
+    <section className="h-[100%] overflow-x-hidden">
       {/* Hero 1 */}
       <div className="h-screen">
         <Link to="#">

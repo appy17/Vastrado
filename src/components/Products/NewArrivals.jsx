@@ -113,12 +113,12 @@ const handleMouseUp =()=>{
       setCanScrollLeft(leftScroll > 0);
       setCanScrollRight(rightScrollable);
     }
-    console.log({
-      scrollLeft: container.scrollLeft,
-      clientWidth: container.clientWidth,
-      containerScrollWidth: container.scrollWidth,
-     //  offSet:container.container.offsetLeft,
-    });
+    // console.log({
+    //   scrollLeft: container.scrollLeft,
+    //   clientWidth: container.clientWidth,
+    //   containerScrollWidth: container.scrollWidth,
+    //  //  offSet:container.container.offsetLeft,
+    // });
   };
   useEffect(() => {
   const container = scrollRef.current;

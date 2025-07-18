@@ -9,7 +9,7 @@ function Searchbar() {
   };
   const handleSearch =(e)=>{
      e.preventDefault();
-     console.log("Search term: ", searchTerm);
+    //  console.log("Search term: ", searchTerm);
      setIsOpen(false);
 
   }

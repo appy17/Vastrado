@@ -20,14 +20,14 @@ function Navbar() {
   return (
     <>
       <nav
-        className="container mx-auto flex item-center justify-between py-4 px-6 "
+        className="container mx-auto flex item-center justify-between py-4 px-6  overflow-x-hidden"
         style={{ marginLeft: "61px" }}
       >
         {/* left logo */}
 
         <div className="hidden md:flex space-x-6">
           <Link
-            to="#"
+            to="/collection/all"
             className="text-gray-700 hover:text-black text-sm font-medium uppercase"
           >
             Men
