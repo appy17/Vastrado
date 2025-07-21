@@ -37,7 +37,7 @@ function CartContent() {
       {cartProducts.map((product) => (
         <div
           key={product.productId}
-          className="flex items-center justify-between py-4 border-b"
+          className="flex items-center justify-between py-4 border-b border-gray-300"
         >
           <div className="flex items-center">
             <img

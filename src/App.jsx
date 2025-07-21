@@ -8,6 +8,8 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Profile from "./Pages/Profile";
 import CollectioPages from "./Pages/CollectioPages";
+import ProductDetails from "./components/Products/ProductDetails";
+import ChecKOut from "./components/Cart/CheckOut";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="register" element={<Register />} />
           <Route path="profile" element={<Profile />} />
           <Route path="collection/:collection" element={<CollectioPages />} />
+          <Route path="product/:id" element={<ProductDetails />}/>
+          <Route  path="checkout" element={<ChecKOut />}/>
 
 
          

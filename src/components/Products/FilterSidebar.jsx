@@ -15,7 +15,7 @@ function FilterSidebar() {
     maxPrice: 100,
   });
   const [priceRange, setPriceRange] = useState([0, 100]);
-  const category = ["Top Wear", "Bottom Wear"];
+  const category = ["TOP WEAR", "BOTTOM WEAR"];
   const colors = [
     "Red",
     "Blue",
@@ -103,7 +103,7 @@ const handlePriceChange =(e)=>{
   }
   
   return (
-    <div className="p-7">
+    <div className="p-7 ">
       <h3 className="text-2xl font-medium text-gray-800 mb-4 flex justify-between items-center">
         Filter
       
@@ -111,18 +111,18 @@ const handlePriceChange =(e)=>{
 
       {/* Accordion Section Template */}
       {/* CATEGORY */}
-      <div className="mb-4 border-b">
+      <div className="mb-4 border-b border-gray-300 cursor-pointer">
         <button
           onClick={() => toggleSection("category")}
-          className="w-full text-left text-lg text-gray-700 font-semibold py-2 flex justify-between items-center"
+          className="w-full text-left text-lg text-black  py-2 flex justify-between items-center cursor-pointer"
         >
           Category
           <span>{openSection === "category" ? "▲" : "▼"}</span>
         </button>
         {openSection === "category" && (
-          <div className="pl-2 pb-2">
+          <div className="pl-2 pb-2 bg-gray-100 -tracking-tight">
             {category.map((cat) => (
-              <div key={cat} className="flex items-center mb-1">
+              <div key={cat} className="flex items-center mb-1 py-2 ">
                 <input
                   type="radio"
                   name="category"
@@ -139,7 +139,7 @@ const handlePriceChange =(e)=>{
       </div>
 
       {/* GENDER */}
-      <div className="mb-4 border-b">
+      <div className="mb-4 border-b border-gray-300">
         <button
           onClick={() => toggleSection("gender")}
           className="w-full text-left text-lg text-gray-700 font-semibold py-2 flex justify-between items-center"
@@ -167,7 +167,7 @@ const handlePriceChange =(e)=>{
       </div>
 
       {/* COLOR */}
-      <div className="mb-4 border-b">
+      <div className="mb-4 border-b border-gray-300">
         <button
           onClick={() => toggleSection("color")}
           className="w-full text-left text-lg text-gray-700 font-semibold py-2 flex justify-between items-center"
@@ -184,7 +184,7 @@ const handlePriceChange =(e)=>{
                 onClick={handleFiltrerChnage}
                 type="button"
                 name="color"
-                className={`w-8 h-8 rounded-full border cursor-pointer transition hover:scale-105 ${
+                className={`w-8 h-8 rounded-full  border border-gray-300 cursor-pointer transition hover:scale-105 ${
                   filters.color === color ? "ring-2 ring-blue-500" : ""
                 }`}
                 style={{ backgroundColor: color.toLowerCase() }}
@@ -195,7 +195,7 @@ const handlePriceChange =(e)=>{
       </div>
 
       {/* SIZE */}
-      <div className="mb-4 border-b">
+      <div className="mb-4 border-b border-gray-300" >
         <button
           onClick={() => toggleSection("size")}
           className="w-full text-left text-lg text-gray-700 font-semibold py-2 flex justify-between items-center"
@@ -223,7 +223,7 @@ const handlePriceChange =(e)=>{
       </div>
 
       {/* MATERIAL */}
-      <div className="mb-4 border-b">
+      <div className="mb-4 border-b border-gray-300">
         <button
           onClick={() => toggleSection("material")}
           className="w-full text-left text-lg text-gray-700 font-semibold py-2 flex justify-between items-center"
@@ -251,7 +251,7 @@ const handlePriceChange =(e)=>{
       </div>
 
       {/* BRAND */}
-      <div className="mb-4 border-b">
+      <div className="mb-4 border-b border-gray-300">
         <button
           onClick={() => toggleSection("brand")}
           className="w-full text-left text-lg text-gray-700 font-semibold py-2 flex justify-between items-center"
@@ -279,7 +279,7 @@ const handlePriceChange =(e)=>{
       </div>
 
       {/* PRICE RANGE */}
-      <div className="mb-4 border-b">
+      <div className="mb-4 border-b border-gray-300">
         <button
           onClick={() => toggleSection("price")}
           className="w-full text-left text-lg text-gray-700 font-semibold py-2 flex justify-between items-center"
